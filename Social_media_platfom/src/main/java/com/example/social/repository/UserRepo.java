@@ -1,4 +1,4 @@
-package com.example.repository;
+package com.example.social.repository;
 
 import org.springframework.stereotype.Repository;
 
@@ -15,6 +15,6 @@ public interface UserRepo extends JpaRepository<User,Long>{
 
 	void updateBioById(Long id, String bio);
 
-	List<User> findTopNActiveUsers(int limit);
+	List<User> findTopNActiveUsers();
 
 }

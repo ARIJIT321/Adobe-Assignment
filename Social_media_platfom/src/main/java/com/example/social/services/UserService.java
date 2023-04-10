@@ -1,4 +1,4 @@
-package com.example.services;
+package com.example.social.services;
 
 import java.util.List;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public interface UserService {
     
     public void updateUserBioById(Long id, String bio) throws UserException;
     
-    public List<User> getTopActiveUsers(int limit) throws UserException;
+    public List<User> getTopActiveUsers() throws UserException;
     
     public int getTotalNumberOfUsers() throws UserException;
     

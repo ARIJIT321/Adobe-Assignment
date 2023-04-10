@@ -6,13 +6,13 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.repository.PostRepo;
-import com.example.repository.UserRepo;
-import com.example.services.UserService;
 import com.example.social.Exception.PostException;
 import com.example.social.Exception.UserException;
 import com.example.social.model.Post;
 import com.example.social.model.User;
+import com.example.social.repository.PostRepo;
+import com.example.social.repository.UserRepo;
+import com.example.social.services.UserService;
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -45,8 +45,8 @@ public class UserServiceImpl implements UserService{
         userRepository.updateBioById(id, bio);
     }
     
-    public List<User> getTopActiveUsers(int limit) throws UserException{
-        return userRepository.findTopNActiveUsers(limit);
+    public List<User> getTopActiveUsers() throws UserException{
+        return userRepository.findTopNActiveUsers();
     }
     
     public int getTotalNumberOfUsers() throws UserException{
